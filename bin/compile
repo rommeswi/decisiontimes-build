@@ -4,6 +4,6 @@
 export "RANDOM_SEED=$(cat $3/RANDOM_SEED)"
 
 # Generate decision problems
-GENERATE_SCRIPT="$1/experiment/generate_json.py"
+GENERATE_SCRIPT="$1/generate_json.py"
 
 python "$GENERATE_SCRIPT"
