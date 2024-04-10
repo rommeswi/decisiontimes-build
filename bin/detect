@@ -1,8 +1,10 @@
 #!/bin/sh
+echo "Decisiontimes build script for decision problems"
 
 # Check for presence of a requirements.txt file
-if [ -f "requirements.txt" ]; then
+if [ -f "experiment/requirements.txt" ]; then
     # Check if there's a Python runtime specified in the requirements file
+    echo "Checking Python requirements.txt"
     if grep -q "^python" requirements.txt; then
         echo "Python application detected"
         if [ -f "config.json"]; then
