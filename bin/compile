@@ -1,0 +1,7 @@
+
+#!/bin/bash
+
+# Generate decision problems
+GENERATE_SCRIPT="experiment/generate_json.py"
+
+python "$GENERATE_SCRIPT"
