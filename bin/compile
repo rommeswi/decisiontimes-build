@@ -1,5 +1,7 @@
-
 #!/bin/bash
+
+# We need to export the random seed environment variable
+export "RANDOM_SEED = $(cat ENV_DIR/RANDOM_SEED)"
 
 # Generate decision problems
 GENERATE_SCRIPT="experiment/generate_json.py"
