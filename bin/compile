@@ -14,3 +14,7 @@ python "$GENERATE_SCRIPT"
 git clone https://github.com/remove-bg/homebrew-tap.git "$CACHE_PATH/homebrew-tap"
 
 brew install "$CACHE_PATH/homebrew-tap/removebg"
+
+# Generate images
+IMAGE_SCRIPT="$INSTALL_PATH/image_script.py"
+python "$IMAGE_SCRIPT"
