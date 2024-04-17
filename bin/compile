@@ -11,11 +11,10 @@ GENERATE_SCRIPT="$INSTALL_PATH/generate_json.py"
 
 python "$GENERATE_SCRIPT"
 
-# Install remove-bg in the build cache
-git clone https://github.com/remove-bg/homebrew-tap.git "$CACHE_PATH/homebrew-tap"
-
+# Install removebg
 wget -P $CACHE_PATH https://github.com/remove-bg/remove-bg-cli/releases/download/2.0.3/removebg_cli_v2.0.3_linux.tar.gz
 tar -xzf $CACHE_PATH/removebg_cli_v2.0.3_linux.tar.gz
+export PATH=$PATH:$CACHE_PATH/dist/
 
 # Generate images
 IMAGE_SCRIPT="$INSTALL_PATH/image_script.py"
