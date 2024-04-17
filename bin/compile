@@ -1,7 +1,8 @@
 #!/bin/bash
-INSTALL_PATH = "$1"
-CACHE_PATH = "$2"
-ENV_PATH = "$3"
+export "INSTALL_PATH=$1"
+export "CACHE_PATH=$2"
+export "ENV_PATH=$3"
+
 # We need to export the random seed environment variable
 export "RANDOM_SEED=$(cat $ENV_PATH/RANDOM_SEED)"
 
