@@ -3,14 +3,13 @@ export "INSTALL_PATH=$1"
 export "CACHE_PATH=$2"
 export "ENV_PATH=$3"
 
-# We need to export the random seed environment variable
+# Export necessary environment variables
 export "RANDOM_SEED=$(cat $ENV_PATH/RANDOM_SEED)"
+export "REMOVE_BG_API_KEY=$(cat $ENV_PATH/REMOVE_BG_API_KEY)"
 
 # Generate decision problems
 GENERATE_SCRIPT="$INSTALL_PATH/generate_json.py"
-
 python "$GENERATE_SCRIPT"
-
 
 # Install removebg
 removebg_file="$CACHE_PATH/removebg_cli_v2.0.3_linux.tar.gz"
@@ -19,7 +18,6 @@ if [ ! -f ""]; then
 else
     echo "-----> removebg already downloaded, skipping download."
 fi
-
 mkdir "$CACHE_PATH/removebg/"
 tar -xvzf "$removebg_file" -C "$CACHE_PATH/removebg"
 export PATH=$PATH:$CACHE_PATH/removebg/dist/
