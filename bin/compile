@@ -18,6 +18,7 @@ if [ ! -f ""]; then
     wget -P $CACHE_PATH https://github.com/remove-bg/remove-bg-cli/releases/download/2.0.3/removebg_cli_v2.0.3_linux.tar.gz
 else
     echo "-----> removebg already downloaded, skipping download."
+fi
 
 tar -xvzf "$removebg_file" -C "removebg"
 export PATH=$PATH:$CACHE_PATH/removebg/dist/
