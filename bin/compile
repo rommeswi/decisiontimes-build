@@ -13,7 +13,7 @@ python "$GENERATE_SCRIPT"
 
 
 # Install removebg
-removebg_file = "$CACHE_PATH/removebg_cli_v2.0.3_linux.tar.gz"
+removebg_file="$CACHE_PATH/removebg_cli_v2.0.3_linux.tar.gz"
 if [ ! -f ""]; then
     wget -P $CACHE_PATH https://github.com/remove-bg/remove-bg-cli/releases/download/2.0.3/removebg_cli_v2.0.3_linux.tar.gz
 else
