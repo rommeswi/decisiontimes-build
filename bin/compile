@@ -11,10 +11,16 @@ GENERATE_SCRIPT="$INSTALL_PATH/generate_json.py"
 
 python "$GENERATE_SCRIPT"
 
+
 # Install removebg
-wget -P $CACHE_PATH https://github.com/remove-bg/remove-bg-cli/releases/download/2.0.3/removebg_cli_v2.0.3_linux.tar.gz
-tar -xzf $CACHE_PATH/removebg_cli_v2.0.3_linux.tar.gz
-export PATH=$PATH:$CACHE_PATH/dist/
+removebg_file = "$CACHE_PATH/removebg_cli_v2.0.3_linux.tar.gz"
+if [ ! -f ""]; then
+    wget -P $CACHE_PATH https://github.com/remove-bg/remove-bg-cli/releases/download/2.0.3/removebg_cli_v2.0.3_linux.tar.gz
+else
+    echo "-----> removebg already downloaded, skipping download."
+
+tar -xvzf "$removebg_file" -C "removebg"
+export PATH=$PATH:$CACHE_PATH/removebg/dist/
 
 # Generate images
 IMAGE_SCRIPT="$INSTALL_PATH/image_script.py"
