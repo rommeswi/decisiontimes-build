@@ -20,7 +20,7 @@ else
     echo "-----> removebg already downloaded, skipping download."
 fi
 
-tar -xvzf "$removebg_file" -C "removebg"
+tar -xvzf "$removebg_file"
 export PATH=$PATH:$CACHE_PATH/removebg/dist/
 
 # Generate images
