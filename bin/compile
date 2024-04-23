@@ -33,5 +33,5 @@ IMAGE_SCRIPT="$INSTALL_PATH/image_script.py"
 python "$IMAGE_SCRIPT"
 
 # Resize videos
-VIDEO_SCRIPT="$INSTALL_PATH/video_script.py"
-python "$VIDEO_SCRIPT"
+# VIDEO_SCRIPT="$INSTALL_PATH/video_script.py"
+# python "$VIDEO_SCRIPT"
