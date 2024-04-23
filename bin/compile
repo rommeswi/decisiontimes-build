@@ -31,3 +31,7 @@ export PATH=$PATH:$CACHE_PATH/removebg/dist/
 # Generate images
 IMAGE_SCRIPT="$INSTALL_PATH/image_script.py"
 python "$IMAGE_SCRIPT"
+
+# Resize videos
+VIDEO_SCRIPT="$INSTALL_PATH/video_script.py"
+python "$VIDEO_SCRIPT"
