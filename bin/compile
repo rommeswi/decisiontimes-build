@@ -25,7 +25,7 @@ if [ ! -f "$removebg_install" ]; then
 else
     echo "       removebg already installed, skipping installation."
 fi
-tar -xvzf "$removebg_file" -C "$CACHE_PATH/removebg"
+tar -xvzf "$removebg_wget" -C "$CACHE_PATH/removebg"
 export PATH=$PATH:$CACHE_PATH/removebg/dist/
 
 # Generate images
